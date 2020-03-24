@@ -26,47 +26,47 @@ const Navbars = (props) => {
 
         if(router.pathname === path) {
 
-            return "text-primary";
+            return true;
         }
 
         else {
 
-            return "text-secondary";
+            return false;
         }
     }
 
     return (
 
         <Fragment>
-            <Navbar className="sticky-top shadow" color="white" light  expand="md">
-                <NavbarBrand>
+            <Navbar className="sticky-top shadow" color="info" dark  expand="md">
+                <NavbarBrand className="text-white">
                     <KingBedOutlined className="mr-1" />
                     <b>CuciSofa</b>
                 </NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
-                        <NavItem>
+                        <NavItem active={isActive('/')}>
                             <Link href="/">
-                                <NavLink href="/" className={isActive('/')}>
+                                <NavLink href="/">
                                     <HomeOutlined className="mr-1 mb-1" />
                                     Beranda
                                 </NavLink>
                             </Link>
                         </NavItem>
 
-                        <NavItem>
+                        <NavItem active={isActive('/pesanan')}>
                             <Link href="/">
-                                <NavLink href="/" className={isActive('/pesanan')}>
+                                <NavLink href="/">
                                     <ShopTwoOutlined className="mr-1 mb-1" />
                                     Pesanan
                                 </NavLink>
                             </Link>
                         </NavItem>
 
-                        <NavItem>
+                        <NavItem active={isActive('/akun')}>
                             <Link href="/">
-                                <NavLink href="/" className={isActive('/akun')}>
+                                <NavLink href="/">
                                     <AccountCircleOutlined className="mr-1 mb-1" />
                                     Akun Saya
                                 </NavLink>
