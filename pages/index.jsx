@@ -89,7 +89,7 @@ class Homepage extends Component {
                     </Row>
                     <DropdownItem className="bg-info border" divider />
                     <Row className="mt-1">
-                        <Col className="mt-2" sm={6} xs={12}>
+                        <Col className="mt-2" sm={6} xs={6}>
                             <Card className="shadow">
                                 <CardBody className="text-center text-muted">
                                     <b>Set Ruang Tamu</b>
@@ -98,7 +98,7 @@ class Homepage extends Component {
                             </Card>
                         </Col>
 
-                        <Col className="mt-2" sm={6} xs={12}>
+                        <Col className="mt-2" sm={6} xs={6}>
                             <Card className="shadow">
                                 <CardBody className="text-center text-muted">
                                     <b>Set Kamar Tidur</b>
@@ -107,7 +107,7 @@ class Homepage extends Component {
                             </Card>
                         </Col>
 
-                        <Col className="mt-2" sm={6} xs={12}>
+                        <Col className="mt-2" sm={6} xs={6}>
                             <Card className="shadow">
                                 <CardBody className="text-center text-muted">
                                     <b>Karpet Masjid</b>
@@ -116,7 +116,7 @@ class Homepage extends Component {
                             </Card>
                         </Col>
 
-                        <Col className="mt-2" sm={6} xs={12}>
+                        <Col className="mt-2" sm={6} xs={6}>
                             <Card className="shadow">
                                 <CardBody className="text-center text-muted">
                                     <b>Set Jok Mobil</b>

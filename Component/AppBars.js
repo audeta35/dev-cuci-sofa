@@ -16,9 +16,9 @@ const AppBars = () => {
     return (
 
         <BottomNavigation showLabels className="fixed-bottom bg-light" value={value} onChange={handleChange} >
-            <BottomNavigationAction className="text-info" label="Recents" value="recents" icon={<HomeOutlined />} />
-            <BottomNavigationAction className="text-info" label="Favorites" value="favorites" icon={<ShopTwoOutlined />} />
-            <BottomNavigationAction className="text-info" label="Nearby" value="nearby" icon={<AccountCircleOutlined />}/>
+            <BottomNavigationAction className="text-info" label="Beranda" value="recents" icon={<HomeOutlined />} />
+            <BottomNavigationAction className="text-info" label="Pesanan" value="favorites" icon={<ShopTwoOutlined />} />
+            <BottomNavigationAction className="text-info" label="Akun" value="nearby" icon={<AccountCircleOutlined />}/>
         </BottomNavigation>
     )
 }
