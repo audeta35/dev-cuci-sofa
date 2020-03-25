@@ -1,8 +1,14 @@
 import React, { Fragment } from 'react';
 import App from 'next/app';
 import Head from 'next/head';
+import grey from '@material-ui/core/colors/grey';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Loading from '../Component/Loading';
+import Navbars from '../Component/Navbars';
+import AppBars from '../Component/AppBars';
+
 
 class CuciSofa extends App {
 
@@ -17,7 +23,11 @@ class CuciSofa extends App {
 
     componentDidMount() {
 
-        this.setState({isLoading: false})
+        setTimeout(() => {
+
+            this.setState({ isLoading: false })
+            document.body.style.backgroundColor = grey[200];
+        }, 1500)
     }
 
     render() {
@@ -34,11 +44,19 @@ class CuciSofa extends App {
                 </Head>
 
                 {
-                    this.state.isLoading ? 
+                    this.state.isLoading 
+                    
+                    ? 
 
                     <Loading />
 
-                    : <Component {...pageProps} /> 
+                    :
+
+                    <Fragment>
+                        <Navbars />
+                        <Component {...pageProps} />
+                        <AppBars />
+                    </Fragment>
                 }
             </Fragment>
         )

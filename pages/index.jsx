@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from 'react';
 
-import { Container, Row, Col, DropdownItem, Button } from 'reactstrap';
-import Navbars from '../Component/Navbars';
+import { Row, Col, DropdownItem, Button, Card, CardBody } from 'reactstrap';
+import { Container } from '@material-ui/core';
+import { KingBedOutlined } from '@material-ui/icons';
+
 import Banner from '../Component/Banner';
 import Services from '../Component/Services';
 
@@ -14,60 +16,62 @@ import seat from '../assets/services/seat.jpg';
 import pillow from '../assets/services/pillow.jpg';
 import helmet from '../assets/services/helmet.jpg';
 
+import cleaner from '../assets/user/cleaner.png';
+
 class Homepage extends Component {
+
+    constructor(props) {
+
+        super(props);
+        this.state = {
+
+            value: 'recents'
+        }
+    }
+
+    handleChange = (event, newValue) => {
+
+        this.setState({ value: newValue })
+    }
 
     render() {
 
         return (
 
             <Fragment>
-                <Navbars />
-                <Container className="mb-5">
-                    <Row className="mt-5">
-                        <Col xs={12} md={8}>
+                <Container maxWidth="sm" className="bg-white shadow">
+                    <Row>
+                        <Col xs={12} md={12} className="mt-4">
                             <Banner />
-                        </Col>
-
-                        <Col xs={12} md={4}>
-                            <Row>
-                                <Col md={12}>
-                                    <img src={banner2} className="w-100 mt-2" height={170} />
-                                </Col>
-
-                                <Col md={12}>
-                                    <img src={banner1} className="w-100 mt-2" height={170} />
-                                </Col>
-                            </Row>
                         </Col>
                     </Row>
 
-                    <Row className="mt-5">
-                        <Col className="bg-info text-center text-white" md={3}>
+                    <Row className="mt-4">
+                        <Col className="bg-info text-center text-white" xs={6}>
                             <h3 className="mt-1">
-                                <b>Layanan Utama</b>
+                                <b>Hot Promo</b>
                             </h3>
                         </Col>
                     </Row>
                     <DropdownItem className="bg-info border" divider/>
-                
                     <Row className="mt-1">
-                        <Col md={2} xs={6} className="mt-2">
+                        <Col md={4} xs={6} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={sofa} />
                         </Col>
-                        <Col md={2} xs={6} className="mt-2">
+                        <Col md={4} xs={6} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={bed} />
                         </Col>
-                        <Col md={2} xs={6} className="mt-2">
+                        <Col md={4} xs={6} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={carpet} />
                         </Col>
-                        <Col md={2} xs={6} className="mt-2">
+                        <Col md={4} xs={6} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={seat} />
                         </Col>
 
-                        <Col md={2} xs={6} className="mt-2">
+                        <Col md={4} xs={6} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={pillow} />
                         </Col>
-                        <Col md={2} xs={6} className="mt-2">
+                        <Col md={4} xs={6} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={helmet} />
                         </Col>
 
@@ -76,35 +80,101 @@ class Homepage extends Component {
                         </Col>
                     </Row>
 
-                    <Row className="mt-5 justify-content-center">
-                        <Col className="bg-info text-center text-white" md={3}>
+                    <Row className="mt-4">
+                        <Col className="bg-info text-center text-white" xs={6} >
                             <h3 className="mt-1">
-                                <b>Cleaner Profie</b>
+                                <b>Paket Bundling</b>
                             </h3>
                         </Col>
                     </Row>
                     <DropdownItem className="bg-info border" divider />
+                    <Row className="mt-1">
+                        <Col className="mt-2" sm={6} xs={12}>
+                            <Card className="shadow">
+                                <CardBody className="text-center text-muted">
+                                    <b>Set Ruang Tamu</b>
+                                </CardBody>
+                                <Button size="sm" block outline color="info">Detail</Button>
+                            </Card>
+                        </Col>
+
+                        <Col className="mt-2" sm={6} xs={12}>
+                            <Card className="shadow">
+                                <CardBody className="text-center text-muted">
+                                    <b>Set Kamar Tidur</b>
+                                </CardBody>
+                                <Button size="sm" block outline color="info">Detail</Button>
+                            </Card>
+                        </Col>
+
+                        <Col className="mt-2" sm={6} xs={12}>
+                            <Card className="shadow">
+                                <CardBody className="text-center text-muted">
+                                    <b>Karpet Masjid</b>
+                                </CardBody>
+                                <Button size="sm" block outline color="info">Detail</Button>
+                            </Card>
+                        </Col>
+
+                        <Col className="mt-2" sm={6} xs={12}>
+                            <Card className="shadow">
+                                <CardBody className="text-center text-muted">
+                                    <b>Set Jok Mobil</b>
+                                </CardBody>
+                                <Button size="sm" block outline color="info">Detail</Button>
+                            </Card>
+                        </Col>
+                    </Row>
 
                     <Row className="mt-5">
-                        <Col className="bg-info text-center text-white" md={{ size: 3, order: 2, offset: 9 }}>
+                        <Col className="bg-info text-center text-white" xs={6}>
                             <h3 className="mt-1">
-                                <b>Daftar Harga</b>
+                                <b>Cleaner Team</b>
                             </h3>
                         </Col>
                     </Row>
                     <DropdownItem className="bg-info border" divider />
+                    <Row className="mt-1 justify-content-center">
+                        <Col md={3} xs={5} sm={4} className="text-center mt-3">
+                            <img src={cleaner} className="img-thumbnail shadow badge-pill" />
+                            
+                            <h6 className="mt-3 text-info">
+                                <b>Audeta Sandy</b>
+                            </h6>
 
-                    <Row className="mt-5 justify-content-center">
-                        <Col className="bg-info text-center text-white" md={3}>
-                            <h3 className="mt-1">
-                                <b>Fitur Unggulan</b>
-                            </h3>
+                            <i className="badge badge-info">Developer</i>
+                        </Col>
+
+                        <Col md={3} xs={5} sm={4} className="text-center mt-3">
+                            <img src={cleaner} className="img-thumbnail shadow badge-pill" />
+                            <h6 className="mt-3 text-info">
+                                <b>Audeta Sandy</b>
+                            </h6>
+
+                            <i className="badge badge-info">Marketing</i>
+                        </Col>
+
+                        <Col md={3} xs={5} sm={4} className="text-center mt-3">
+                            <img src={cleaner} className="img-thumbnail shadow badge-pill" />
+                            <h6 className="mt-3 text-info">
+                                <b>Audeta Sandy</b>
+                            </h6>
+
+                            <i className="badge badge-info">Founder</i>
+                        </Col>
+
+                        <Col md={3} xs={5} sm={4} className="text-center mt-3">
+                            <img src={cleaner} className="img-thumbnail shadow badge-pill" />
+                            <h6 className="mt-3 text-info">
+                                <b>Audeta Sandy</b>
+                            </h6>
+
+                            <i className="badge badge-info">Co Founder</i>
                         </Col>
                     </Row>
-                    <DropdownItem className="bg-info border" divider />
 
-                    <Row className="mt-5">
-                        <Col className="bg-info text-center text-white" md={3}>
+                    <Row className="mt-5 mb-5">
+                        <Col className="bg-info text-center text-white" xs={6}>
                             <h3 className="mt-1">
                                 <b>Jangkauan Area</b>
                             </h3>

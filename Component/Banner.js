@@ -54,8 +54,7 @@ const Banner = (props) => {
                 onExited={() => setAnimating(false)}
                 key={item.src}
             >
-                <img src={item.src} className="w-100" height={350} alt={item.altText} />
-                <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+                <img src={item.src} className="w-100" height={170} alt={item.altText} />
             </CarouselItem>
         );
     });
