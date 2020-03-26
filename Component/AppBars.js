@@ -2,23 +2,39 @@ import React, { useState } from 'react';
 
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import { HomeOutlined, ShopTwoOutlined, AccountCircleOutlined, KingBedOutlined } from '@material-ui/icons';
+import { HomeOutlined, ReceiptOutlined, AccountCircleOutlined } from '@material-ui/icons';
+
+import Router, { useRouter } from 'next/router';
 
 
 const AppBars = () => {
 
-    let [value, setValue] = useState('recents');
+    let router = useRouter();
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
+    const isActive = (path) => {
+
+        if (router.pathname === path) {
+
+            return "text-info";
+        }
+
+        else {
+
+            return "text-muted";
+        }
+    }
+
+    const pushRoute = (event, newValue) => {
+
+        Router.push(newValue)
+    }
 
     return (
 
-        <BottomNavigation showLabels className="fixed-bottom bg-light" value={value} onChange={handleChange} >
-            <BottomNavigationAction className="text-info" label="Beranda" value="recents" icon={<HomeOutlined />} />
-            <BottomNavigationAction className="text-info" label="Pesanan" value="favorites" icon={<ShopTwoOutlined />} />
-            <BottomNavigationAction className="text-info" label="Akun" value="nearby" icon={<AccountCircleOutlined />}/>
+        <BottomNavigation showLabels className="fixed-bottom shadow" value={router.pathname} onChange={pushRoute}>
+            <BottomNavigationAction className={isActive('/')} label="Beranda" value="/" icon={<HomeOutlined />} />
+            <BottomNavigationAction className={isActive('/pesanan')} label="Pesanan" value="/pesanan" icon={<ReceiptOutlined />} />
+            <BottomNavigationAction className={isActive('/akun')} label="Akun" value="/akun" icon={<AccountCircleOutlined />}/>
         </BottomNavigation>
     )
 }

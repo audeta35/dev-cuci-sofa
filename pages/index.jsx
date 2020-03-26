@@ -1,14 +1,12 @@
 import React, { Component, Fragment } from 'react';
 
 import { Row, Col, DropdownItem, Button, Card, CardBody } from 'reactstrap';
-import { Container } from '@material-ui/core';
-import { KingBedOutlined } from '@material-ui/icons';
+import { Container, Chip } from '@material-ui/core';
+import { RoomOutlined } from '@material-ui/icons';
 
 import Banner from '../Component/Banner';
 import Services from '../Component/Services';
 
-import banner1 from '../assets/banner/123.jpg'
-import banner2 from '../assets/banner/1234.jpg'
 import sofa from '../assets/services/sofa.jpg';
 import bed from '../assets/services/bed.jpeg';
 import carpet from '../assets/services/carpet.jpg';
@@ -39,7 +37,7 @@ class Homepage extends Component {
         return (
 
             <Fragment>
-                <Container maxWidth="sm" className="bg-white shadow">
+                <Container maxWidth="sm" className="bg-white">
                     <Row>
                         <Col xs={12} md={12} className="mt-4">
                             <Banner />
@@ -173,7 +171,7 @@ class Homepage extends Component {
                         </Col>
                     </Row>
 
-                    <Row className="mt-5 mb-5">
+                    <Row className="mt-5">
                         <Col className="bg-info text-center text-white" xs={6}>
                             <h3 className="mt-1">
                                 <b>Jangkauan Area</b>
@@ -181,7 +179,41 @@ class Homepage extends Component {
                         </Col>
                     </Row>
                     <DropdownItem className="bg-info border" divider />
+                    <Row className="mb-5">
+                        <Col>
+                            <Card className="shadow">
+                                <CardBody>
+                                    <Row className="justify-content-center">
+                                        <Col className="mt-1 text-center">
+                                            <Chip
+                                                icon={<RoomOutlined />}
+                                                label="Jakarta"
+                                                variant="outlined"
+                                            />
+                                        </Col>
 
+                                        <Col className="mt-1 text-center">
+                                            <Chip
+                                                icon={<RoomOutlined />}
+                                                label="Bekasi"
+                                                variant="outlined"
+                                            />
+                                        </Col>
+
+                                        <Col className="mt-1 text-center">
+                                            <Chip
+                                                icon={<RoomOutlined />}
+                                                label="Bogor"
+                                                variant="outlined"
+                                            />
+                                        </Col>
+                                    </Row>
+                                </CardBody>
+                                <Button color="info">Request Tempat</Button>
+                            </Card>
+                        </Col>
+                    </Row>
+                    <DropdownItem className="bg-info border mb-4" divider />
                 </Container>
             </Fragment>
         )

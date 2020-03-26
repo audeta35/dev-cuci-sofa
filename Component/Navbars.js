@@ -7,12 +7,11 @@ import { HomeOutlined, ShopTwoOutlined, AccountCircleOutlined, KingBedOutlined }
 import {
     Collapse,
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
     NavLink,
-    NavbarText,
+    Row,
 } from 'reactstrap';
 
 const Navbars = (props) => {
@@ -20,7 +19,6 @@ const Navbars = (props) => {
     let router = useRouter();
     let [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => setIsOpen(!isOpen);
     const isActive = (path) => {
 
         if(router.pathname === path) {
@@ -37,12 +35,14 @@ const Navbars = (props) => {
     return (
 
         <Fragment>
-            <Navbar className="sticky-top shadow-sm" color="info" dark expand="md">
+            <Navbar className="sticky-top shadow" color="info" dark expand="md">
                 <Container maxWidth="sm">
-                    <NavbarBrand className="text-white">
-                        <KingBedOutlined className="mr-1" />
-                        <b>CuciSofa</b>
-                    </NavbarBrand>
+                    <Row>
+                        <NavbarBrand className="text-white">
+                            <KingBedOutlined className="mr-1" />
+                            <b>CuciSofa</b>
+                        </NavbarBrand>
+                    </Row>
                 </Container>
             </Navbar>
         </Fragment>
