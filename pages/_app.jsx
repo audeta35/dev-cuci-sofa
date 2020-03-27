@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import grey from '@material-ui/core/colors/grey';
+import { withRouter } from 'next/router';
 
+import grey from '@material-ui/core/colors/grey';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Loading from '../Component/Loading';
-import Navbars from '../Component/Navbars';
 import AppBars from '../Component/AppBars';
 
 
@@ -53,7 +53,6 @@ class CuciSofa extends App {
                     :
 
                     <Fragment>
-                        <Navbars />
                         <Component {...pageProps} />
                         <AppBars />
                     </Fragment>
@@ -63,4 +62,4 @@ class CuciSofa extends App {
     }
 }
 
-export default CuciSofa;
+export default withRouter(CuciSofa);

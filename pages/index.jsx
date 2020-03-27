@@ -4,6 +4,9 @@ import { Row, Col, DropdownItem, Button, Card, CardBody } from 'reactstrap';
 import { Container, Chip } from '@material-ui/core';
 import { RoomOutlined } from '@material-ui/icons';
 
+import { withRouter } from 'next/router';
+
+import Navbars from '../Component/Navbars';
 import Banner from '../Component/Banner';
 import Services from '../Component/Services';
 
@@ -37,6 +40,7 @@ class Homepage extends Component {
         return (
 
             <Fragment>
+                <Navbars navbrand="Cuci Sofa"/>
                 <Container maxWidth="sm" className="bg-white">
                     <Row>
                         <Col xs={12} md={12} className="mt-4">
@@ -220,4 +224,4 @@ class Homepage extends Component {
     }
 }
 
-export default Homepage;
+export default withRouter(Homepage);

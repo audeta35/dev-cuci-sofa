@@ -4,7 +4,7 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import { HomeOutlined, ReceiptOutlined, AccountCircleOutlined } from '@material-ui/icons';
 
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 
 
 const AppBars = () => {
@@ -26,7 +26,7 @@ const AppBars = () => {
 
     const pushRoute = (event, newValue) => {
 
-        Router.push(newValue)
+        router.push(newValue)
     }
 
     return (

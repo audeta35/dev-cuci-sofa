@@ -40,7 +40,7 @@ const Navbars = (props) => {
                     <Row>
                         <NavbarBrand className="text-white">
                             <KingBedOutlined className="mr-1" />
-                            <b>CuciSofa</b>
+                            <b> {props.navbrand} </b>
                         </NavbarBrand>
                     </Row>
                 </Container>
