@@ -36,7 +36,7 @@ const Navbars = (props) => {
 
         <Fragment>
             <Navbar className="sticky-top shadow" color="info" dark expand="md">
-                <Container maxWidth="sm">
+                <Container maxWidth="xs">
                     <Row>
                         <NavbarBrand className="text-white">
                             <KingBedOutlined className="mr-1" />

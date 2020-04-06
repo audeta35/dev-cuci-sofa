@@ -26,8 +26,10 @@ class CuciSofa extends App {
         setTimeout(() => {
 
             this.setState({ isLoading: false })
-            document.body.style.backgroundColor = grey[200];
-        }, 1500)
+            document.body.style.backgroundColor = grey[100];
+        }, 1500);
+
+        console.log('root app')
     }
 
     render() {
