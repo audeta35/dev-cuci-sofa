@@ -58,12 +58,16 @@ class Akun extends Component {
                             </Button>
                         </Col>
 
+                        <hr className="mt-4 mb-4" />
+
                         <Col xs={12} className="mt-3 mb-5">
                             <Button color="danger" size="sm" block outline>
                                 Keluar
                             </Button>
                         </Col>
+
                     </Row>             
+                    <Divider className="mt-5" />
                 </Container>
             </Fragment>
         )
