@@ -1,7 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import { withRouter } from 'next/router';
 import Navbars from '../Component/Navbars';
-import { Container } from '@material-ui/core';
+import { Container, Divider } from '@material-ui/core';
+import { EventTwoTone, MonetizationOnTwoTone, SupervisedUserCircleTwoTone } from '@material-ui/icons';
+import seat from '../assets/services/seat.jpg';
+import { Card, CardHeader, CardBody, CardFooter, Media, Row, Col } from 'reactstrap';
+import Invoice from '../Component/Invoice';
 
 class Pesanan extends Component {
 
@@ -25,10 +29,15 @@ class Pesanan extends Component {
 
             <Fragment>
                 <Navbars navbrand="Pesanan" />
-
                 <Container maxWidth="xs">
-                     <h2>Halaman Pesanan</h2>
+                    <Invoice />
+                    <Invoice />
+                    <Invoice />
+                    <Invoice />
                 </Container>
+                <br />
+                <br />
+                <br />
             </Fragment>
         )
     }
