@@ -18,6 +18,7 @@ import pillow from '../assets/services/pillow.jpg';
 import helmet from '../assets/services/helmet.jpg';
 
 import cleaner from '../assets/user/cleaner.png';
+import Bundling from '../Component/Bundling';
 
 class Homepage extends Component {
 
@@ -28,6 +29,11 @@ class Homepage extends Component {
 
             value: 'recents'
         }
+    }
+
+    componentDidMount() {
+
+        console.log('pages: Homepage')
     }
 
     handleChange = (event, newValue) => {
@@ -41,7 +47,7 @@ class Homepage extends Component {
 
             <Fragment>
                 <Navbars navbrand="Cuci Sofa"/>
-                <Container maxWidth="sm" className="bg-white">
+                <Container maxWidth="xs" className="bg-white">
                     <Row>
                         <Col xs={12} md={12} className="mt-4">
                             <Banner />
@@ -50,30 +56,29 @@ class Homepage extends Component {
 
                     <Row className="mt-4">
                         <Col className="bg-info text-center text-white" xs={6}>
-                            <h3 className="mt-1">
+                            <h4 className="mt-1">
                                 <b>Hot Promo</b>
-                            </h3>
+                            </h4>
                         </Col>
                     </Row>
-                    <DropdownItem className="bg-info border" divider/>
                     <Row className="mt-1">
-                        <Col md={4} xs={6} className="mt-2">
+                        <Col xs={4} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={sofa} />
                         </Col>
-                        <Col md={4} xs={6} className="mt-2">
+                        <Col xs={4} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={bed} />
                         </Col>
-                        <Col md={4} xs={6} className="mt-2">
+                        <Col xs={4} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={carpet} />
                         </Col>
-                        <Col md={4} xs={6} className="mt-2">
+                        <Col xs={4} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={seat} />
                         </Col>
 
-                        <Col md={4} xs={6} className="mt-2">
+                        <Col xs={4} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={pillow} />
                         </Col>
-                        <Col md={4} xs={6} className="mt-2">
+                        <Col xs={4} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={helmet} />
                         </Col>
 
@@ -84,61 +89,35 @@ class Homepage extends Component {
 
                     <Row className="mt-4">
                         <Col className="bg-info text-center text-white" xs={6} >
-                            <h3 className="mt-1">
+                            <h4 className="mt-1">
                                 <b>Paket Bundling</b>
-                            </h3>
+                            </h4>
                         </Col>
                     </Row>
-                    <DropdownItem className="bg-info border" divider />
                     <Row className="mt-1">
-                        <Col className="mt-2" sm={6} xs={6}>
-                            <Card className="shadow">
-                                <CardBody className="text-center text-muted">
-                                    <b>Set Ruang Tamu</b>
-                                </CardBody>
-                                <Button size="sm" block outline color="info">Detail</Button>
-                            </Card>
+                        <Col className="mt-2">
+                            <Bundling title="Set Ruang Tamu" image={carpet} />
                         </Col>
 
-                        <Col className="mt-2" sm={6} xs={6}>
-                            <Card className="shadow">
-                                <CardBody className="text-center text-muted">
-                                    <b>Set Kamar Tidur</b>
-                                </CardBody>
-                                <Button size="sm" block outline color="info">Detail</Button>
-                            </Card>
+                        <Col className="mt-2">
+                            <Bundling title="Set Kamar Tidur" image={pillow} />
                         </Col>
 
-                        <Col className="mt-2" sm={6} xs={6}>
-                            <Card className="shadow">
-                                <CardBody className="text-center text-muted">
-                                    <b>Karpet Masjid</b>
-                                </CardBody>
-                                <Button size="sm" block outline color="info">Detail</Button>
-                            </Card>
-                        </Col>
-
-                        <Col className="mt-2" sm={6} xs={6}>
-                            <Card className="shadow">
-                                <CardBody className="text-center text-muted">
-                                    <b>Set Jok Mobil</b>
-                                </CardBody>
-                                <Button size="sm" block outline color="info">Detail</Button>
-                            </Card>
+                        <Col className="mt-2">
+                            <Bundling title="Set Jok Mobil" image={seat} />
                         </Col>
                     </Row>
 
                     <Row className="mt-5">
                         <Col className="bg-info text-center text-white" xs={6}>
-                            <h3 className="mt-1">
+                            <h4 className="mt-1">
                                 <b>Cleaner Team</b>
-                            </h3>
+                            </h4>
                         </Col>
                     </Row>
-                    <DropdownItem className="bg-info border" divider />
                     <Row className="mt-1 justify-content-center">
-                        <Col md={3} xs={5} sm={4} className="text-center mt-3">
-                            <img src={cleaner} className="img-thumbnail shadow badge-pill" />
+                        <Col md={3} xs={3} sm={4} className="text-center mt-3">
+                            <img src={cleaner} className="img-thumbnail shadow rounded-circle" />
                             
                             <h6 className="mt-3 text-info">
                                 <b>Audeta Sandy</b>
@@ -147,8 +126,8 @@ class Homepage extends Component {
                             <i className="badge badge-info">Developer</i>
                         </Col>
 
-                        <Col md={3} xs={5} sm={4} className="text-center mt-3">
-                            <img src={cleaner} className="img-thumbnail shadow badge-pill" />
+                        <Col md={3} xs={3} sm={4} className="text-center mt-3">
+                            <img src={cleaner} className="img-thumbnail shadow rounded-circle" />
                             <h6 className="mt-3 text-info">
                                 <b>Audeta Sandy</b>
                             </h6>
@@ -156,8 +135,8 @@ class Homepage extends Component {
                             <i className="badge badge-info">Marketing</i>
                         </Col>
 
-                        <Col md={3} xs={5} sm={4} className="text-center mt-3">
-                            <img src={cleaner} className="img-thumbnail shadow badge-pill" />
+                        <Col md={3} xs={3} sm={4} className="text-center mt-3">
+                            <img src={cleaner} className="img-thumbnail shadow rounded-circle" />
                             <h6 className="mt-3 text-info">
                                 <b>Audeta Sandy</b>
                             </h6>
@@ -165,8 +144,8 @@ class Homepage extends Component {
                             <i className="badge badge-info">Founder</i>
                         </Col>
 
-                        <Col md={3} xs={5} sm={4} className="text-center mt-3">
-                            <img src={cleaner} className="img-thumbnail shadow badge-pill" />
+                        <Col md={3} xs={3} sm={4} className="text-center mt-3">
+                            <img src={cleaner} className="img-thumbnail shadow rounded-circle" />
                             <h6 className="mt-3 text-info">
                                 <b>Audeta Sandy</b>
                             </h6>
@@ -177,15 +156,15 @@ class Homepage extends Component {
 
                     <Row className="mt-5">
                         <Col className="bg-info text-center text-white" xs={6}>
-                            <h3 className="mt-1">
-                                <b>Jangkauan Area</b>
-                            </h3>
+                            <h4 className="mt-1">
+                                <b>Jangkauan</b>
+                            </h4>
                         </Col>
                     </Row>
-                    <DropdownItem className="bg-info border" divider />
-                    <Row className="mb-5">
+                    <Row className="mb-5 mt-3">
                         <Col>
                             <Card className="shadow">
+                                <Button color="info">Request Tempat</Button>
                                 <CardBody>
                                     <Row className="justify-content-center">
                                         <Col className="mt-1 text-center">
@@ -213,7 +192,6 @@ class Homepage extends Component {
                                         </Col>
                                     </Row>
                                 </CardBody>
-                                <Button color="info">Request Tempat</Button>
                             </Card>
                         </Col>
                     </Row>
