@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { withRouter } from 'next/router';
 import Navbars from '../Component/Navbars';
+import { Container } from '@material-ui/core';
 
 class Pesanan extends Component {
 
@@ -24,7 +25,10 @@ class Pesanan extends Component {
 
             <Fragment>
                 <Navbars navbrand="Pesanan" />
-                <h1>Halaman Pesanan</h1>
+
+                <Container maxWidth="xs">
+                     <h2>Halaman Pesanan</h2>
+                </Container>
             </Fragment>
         )
     }

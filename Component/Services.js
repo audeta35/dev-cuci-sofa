@@ -15,7 +15,7 @@ const Services = (props) => {
                     <i style={{ textDecoration: "line-through" }}>Rp.45.000</i>
                 </span>
                 
-                <Button color="info" className="stretched-link" outline>Rp.30.000</Button>
+                <Button color="info" className="stretched-link" size="sm" outline>Rp.30.000</Button>
 
             </Card>
         </Fragment>
