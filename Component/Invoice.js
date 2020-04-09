@@ -8,7 +8,7 @@ const Invoice = () => {
 
     return (
 
-        <Card className="my-4 shadow">
+        <Card className="my-4 shadow-sm">
             <CardHeader className="text-secondary bg-white">
                 <span className="badge badge-info">ID Invoice</span> /
                 <span className="badge badge-secondary">Tanggal Pesanan</span> /
