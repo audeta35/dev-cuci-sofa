@@ -26,7 +26,7 @@ const AppBars = () => {
 
     const pushRoute = (event, newValue) => {
 
-        router.push(newValue)
+        router.replace(newValue)
     }
 
     return (
