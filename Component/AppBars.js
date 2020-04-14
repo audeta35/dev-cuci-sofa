@@ -31,7 +31,7 @@ const AppBars = () => {
 
     return (
 
-        <BottomNavigation maxWidth="xs" showLabels className="fixed-bottom" value={router.pathname} onChange={pushRoute}>
+        <BottomNavigation maxWidth="xs" showLabels className="fixed-bottom shadow-sm" value={router.pathname} onChange={pushRoute}>
             <BottomNavigationAction className={isActive('/')} label="Beranda" value="/" icon={<HomeOutlined />} />
             <BottomNavigationAction className={isActive('/pesanan')} label="Pesanan" value="/pesanan" icon={<ReceiptOutlined />} />
             <BottomNavigationAction className={isActive('/akun')} label="Akun" value="/akun" icon={<AccountCircleOutlined />}/>
