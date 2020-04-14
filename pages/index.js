@@ -47,21 +47,21 @@ class Homepage extends Component {
 
             <Fragment>
                 <Navbars navbrand="Cuci Sofa"/>
-                <Container maxWidth="xs" className="bg-white">
-                    <Row>
-                        <Col xs={12} md={12} className="mt-4">
+                <Container maxWidth="xs">
+                    <Row className="my-4">
+                        <Col>
                             <Banner />
                         </Col>
                     </Row>
 
-                    <Row className="mt-4">
+                    <Row className="my-4">
                         <Col className="bg-info text-center text-white" xs={6}>
                             <h4 className="mt-1">
                                 <b>Hot Promo</b>
                             </h4>
                         </Col>
                     </Row>
-                    <Row className="mt-1">
+                    <Row className="bg-white py-3">
                         <Col xs={4} className="mt-2">
                             <Services title="Sofa & Sofa Bed" image={sofa} />
                         </Col>
@@ -87,14 +87,14 @@ class Homepage extends Component {
                         </Col>
                     </Row>
 
-                    <Row className="mt-4">
+                    <Row className="my-4">
                         <Col className="bg-info text-center text-white" xs={6} >
                             <h4 className="mt-1">
                                 <b>Paket Bundling</b>
                             </h4>
                         </Col>
                     </Row>
-                    <Row className="mt-1">
+                    <Row className="bg-white py-3">
                         <Col className="mt-2">
                             <Bundling title="Set Ruang Tamu" image={carpet} />
                         </Col>
@@ -108,14 +108,14 @@ class Homepage extends Component {
                         </Col>
                     </Row>
 
-                    <Row className="mt-5">
+                    <Row className="my-4">
                         <Col className="bg-info text-center text-white" xs={6}>
                             <h4 className="mt-1">
                                 <b>Cleaner Team</b>
                             </h4>
                         </Col>
                     </Row>
-                    <Row className="mt-1 justify-content-center">
+                    <Row className="bg-white py-3 justify-content-center">
                         <Col md={3} xs={3} sm={4} className="text-center mt-3">
                             <img src={cleaner} className="img-thumbnail shadow rounded-circle" />
                             
@@ -154,45 +154,36 @@ class Homepage extends Component {
                         </Col>
                     </Row>
 
-                    <Row className="mt-5">
+                    <Row className="my-4">
                         <Col className="bg-info text-center text-white" xs={6}>
                             <h4 className="mt-1">
                                 <b>Jangkauan</b>
                             </h4>
                         </Col>
                     </Row>
-                    <Row className="mb-5 mt-3">
-                        <Col>
-                            <Card className="shadow">
-                                <Button color="info">Request Tempat</Button>
-                                <CardBody>
-                                    <Row className="justify-content-center">
-                                        <Col className="mt-1 text-center">
-                                            <Chip
-                                                icon={<RoomOutlined />}
-                                                label="Jakarta"
-                                                variant="outlined"
-                                            />
-                                        </Col>
+                    <Row className="mb-5 bg-white py-3 justify-content-center">
+                        <Col className="mt-1 text-center">
+                            <Chip
+                                icon={<RoomOutlined />}
+                                label="Jakarta"
+                                variant="outlined"
+                            />
+                        </Col>
 
-                                        <Col className="mt-1 text-center">
-                                            <Chip
-                                                icon={<RoomOutlined />}
-                                                label="Bekasi"
-                                                variant="outlined"
-                                            />
-                                        </Col>
+                        <Col className="mt-1 text-center">
+                            <Chip
+                                icon={<RoomOutlined />}
+                                label="Bekasi"
+                                variant="outlined"
+                            />
+                        </Col>
 
-                                        <Col className="mt-1 text-center">
-                                            <Chip
-                                                icon={<RoomOutlined />}
-                                                label="Bogor"
-                                                variant="outlined"
-                                            />
-                                        </Col>
-                                    </Row>
-                                </CardBody>
-                            </Card>
+                        <Col className="mt-1 text-center">
+                            <Chip
+                                icon={<RoomOutlined />}
+                                label="Bogor"
+                                variant="outlined"
+                            />
                         </Col>
                     </Row>
                     <DropdownItem className="bg-info border mb-4" divider />
