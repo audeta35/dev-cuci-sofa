@@ -18,7 +18,7 @@ const Navbars = (props) => {
     return (
 
         <Fragment>
-            <Navbar className="sticky-top shadow" color="info" dark expand="md">
+            <Navbar className="sticky-top shadow-sm" color="info" dark expand="md">
                 <Container maxWidth="xs">
                     <Row>
                         <NavbarBrand className="text-white">
