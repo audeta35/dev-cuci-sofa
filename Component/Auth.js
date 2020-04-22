@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import {useRouter} from 'next/router';
 import { PersonTwoTone, PersonAddTwoTone, HelpTwoTone, ReportTwoTone } from '@material-ui/icons';
+import { List, ListItem } from '@material-ui/core';
 
 const Auth = () => {
 
@@ -15,22 +16,24 @@ const Auth = () => {
 
         <Fragment>
 
-            <h2 className="text-center text-info my-5">Cuci Sofa</h2>
-
-            <div className="mx-1 text-secondary">
-                <div onClick={() => pushLink('/daftar')} className="my-4">
+            <List className="text-secondary">
+                <ListItem button className="my-3" onClick={() => pushLink('/daftar')}>
                     <PersonAddTwoTone className="mb-1 mr-2" /> Daftar
-				</div>
-                <div onClick={() => pushLink('/masuk')} className="my-4">
+                </ListItem>
+
+                <ListItem button className="my-3" onClick={() => pushLink('/masuk')}>
                     <PersonTwoTone className="mb-1 mr-2" /> Masuk
-				</div>
-                <div className="my-4">
+                </ListItem>
+
+                <ListItem button className="my-3" onClick={() => pushLink('/')}>
                     <HelpTwoTone className="mb-1 mr-2" /> Tentang kami
-				</div>
-                <div className="my-4">
+                </ListItem>
+
+                <ListItem button className="my-3" onClick={() => pushLink('/')}>
                     <ReportTwoTone className="mb-1 mr-2" /> Syarat dan ketentuan
-				</div>
-            </div>
+                </ListItem>
+
+            </List>
 
         </Fragment>
     )
