@@ -43,4 +43,4 @@ class Pesanan extends Component {
     }
 }
 
-export default withRouter(Pesanan);
+export default Pesanan;

@@ -17,4 +17,4 @@ class Daftar extends Component {
     }
 }
 
-export default withRouter(Daftar);
+export default Daftar;

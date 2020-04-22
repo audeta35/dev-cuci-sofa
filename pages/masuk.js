@@ -16,4 +16,4 @@ class Masuk extends Component {
     }
 }
 
-export default withRouter(Masuk);
+export default Masuk;

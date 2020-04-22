@@ -32,7 +32,7 @@ class Akun extends Component {
                                 className="img-thumbnail rounded-circle shadow-sm"
                                 width={150}
                             />
-                            <IconButton className="bg-danger text-white" style={{position: 'absolute', bottom: 0, right: 0}}>
+                            <IconButton className="bg-danger text-white mr-4" style={{position: 'absolute', bottom: 0, right: 0}}>
                                 <ExitToApp />
                             </IconButton>
                         </Col>
@@ -68,4 +68,4 @@ class Akun extends Component {
     }
 }
 
-export default withRouter(Akun);
+export default Akun;
