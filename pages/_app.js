@@ -7,8 +7,6 @@ import grey from '@material-ui/core/colors/grey';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Loading from '../Component/Loading';
-import AppBars from '../Component/AppBars';
-
 
 class CuciSofa extends App {
 
@@ -56,7 +54,6 @@ class CuciSofa extends App {
 
                     <Fragment>
                         <Component {...pageProps} />
-                        <AppBars />
                     </Fragment>
                 }
             </Fragment>

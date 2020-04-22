@@ -6,6 +6,7 @@ import { RoomOutlined } from '@material-ui/icons';
 
 import { withRouter } from 'next/router';
 
+import AppBars from '../Component/AppBars';
 import Navbars from '../Component/Navbars';
 import Banner from '../Component/Banner';
 import Services from '../Component/Services';
@@ -188,6 +189,7 @@ class Homepage extends Component {
                     </Row>
                     <DropdownItem className="bg-info border mb-4" divider />
                 </Container>
+                <AppBars />
             </Fragment>
         )
     }
