@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { withRouter } from 'next/router';
 import Navbars from '../Component/Navbars';
+import { Container } from '@material-ui/core';
 
 class Masuk extends Component {
 
@@ -9,8 +9,10 @@ class Masuk extends Component {
         return (
 
             <Fragment>
-                <Navbars navbrand="Menu Masuk" />
-                <h1>Halaman Masuk</h1>
+                <Navbars navbrand="Masuk" stack={true} />
+                <Container maxWidth="sm">
+                    <h2 className="text-info mt-5">Cuci Sofa</h2>
+                </Container>
             </Fragment>
         )
     }

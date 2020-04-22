@@ -6,6 +6,7 @@ import { EventTwoTone, MonetizationOnTwoTone, SupervisedUserCircleTwoTone } from
 import seat from '../assets/services/seat.jpg';
 import { Card, CardHeader, CardBody, CardFooter, Media, Row, Col } from 'reactstrap';
 import Invoice from '../Component/Invoice';
+import AppBars from '../Component/AppBars';
 
 class Pesanan extends Component {
 
@@ -38,6 +39,7 @@ class Pesanan extends Component {
                 <br />
                 <br />
                 <br />
+                <AppBars />
             </Fragment>
         )
     }

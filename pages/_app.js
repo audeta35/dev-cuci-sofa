@@ -39,7 +39,7 @@ class CuciSofa extends App {
             <Fragment>
                 <Head>
                     <title>Jasa Cuci Sofa</title>
-                    <meta name="theme-color" content="#17a2b8" />
+                    <meta name="theme-color" content="#2c8897" />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
 
