@@ -11,7 +11,7 @@ class Daftar extends Component {
 
             <Fragment>
                 <Navbars navbrand="Daftar" stack={true} />
-                <Container maxWidth="sm">
+                <Container maxWidth="xs">
                     <h2 className="text-info mt-5">Cuci Sofa</h2>
                 </Container>
             </Fragment>
