@@ -8,7 +8,7 @@ import { Card, CardHeader, CardBody, CardFooter, Media, Row, Col } from 'reactst
 import Invoice from '../Component/Invoice';
 import AppBars from '../Component/AppBars';
 
-class Pesanan extends Component {
+class pesanan extends Component {
 
     constructor(props) {
 
@@ -45,4 +45,4 @@ class Pesanan extends Component {
     }
 }
 
-export default Pesanan;
+export default pesanan;

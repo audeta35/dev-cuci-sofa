@@ -21,7 +21,7 @@ import helmet from '../assets/services/helmet.jpg';
 import cleaner from '../assets/user/cleaner.png';
 import Bundling from '../Component/Bundling';
 
-class Homepage extends Component {
+class homepage extends Component {
 
     constructor(props) {
 
@@ -34,7 +34,7 @@ class Homepage extends Component {
 
     componentDidMount() {
 
-        console.log('pages: Homepage')
+        console.log('pages: homepage')
     }
 
     handleChange = (event, newValue) => {
@@ -64,27 +64,23 @@ class Homepage extends Component {
                     </Row>
                     <Row className="bg-white py-3">
                         <Col xs={4} className="mt-2">
-                            <Services title="Sofa & Sofa Bed" image={sofa} />
+                            <Services title="Sofa & Sofa Bed" pcs="item" price={50000} dicount={35000} image={sofa} />
                         </Col>
                         <Col xs={4} className="mt-2">
-                            <Services title="Sofa & Sofa Bed" image={bed} />
+                            <Services title="Kasur" pcs="item" price={45000} dicount={30000} image={bed} />
                         </Col>
                         <Col xs={4} className="mt-2">
-                            <Services title="Sofa & Sofa Bed" image={carpet} />
+                            <Services title="Karpet" pcs="meter" price={30000} dicount={25000} image={carpet} />
                         </Col>
                         <Col xs={4} className="mt-2">
-                            <Services title="Sofa & Sofa Bed" image={seat} />
+                            <Services title="Jok Mobil" pcs="item" price={60000} dicount={40000} image={seat} />
                         </Col>
 
                         <Col xs={4} className="mt-2">
-                            <Services title="Sofa & Sofa Bed" image={pillow} />
+                            <Services title="Bantal" pcs="item" price={20000} dicount={15000} image={pillow} />
                         </Col>
                         <Col xs={4} className="mt-2">
-                            <Services title="Sofa & Sofa Bed" image={helmet} />
-                        </Col>
-
-                        <Col md={12} className="mt-3">
-                            <Button color="info" block outline>Pesanan Kustom</Button>
+                            <Services title="Helm" pcs="item" price={10000} dicount={5000} image={helmet} />
                         </Col>
                     </Row>
 
@@ -195,4 +191,4 @@ class Homepage extends Component {
     }
 }
 
-export default Homepage;
+export default homepage;

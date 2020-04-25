@@ -7,7 +7,7 @@ import Auth from '../Component/Auth';
 import Navbars from '../Component/Navbars';
 import AppBars from '../Component/AppBars';
 
-class Akun extends Component {
+class akun extends Component {
 
     constructor(props) {
 
@@ -29,4 +29,4 @@ class Akun extends Component {
     }
 }
 
-export default Akun;
+export default akun;

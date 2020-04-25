@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Loading from '../Component/Loading';
 
-class CuciSofa extends App {
+class _app extends App {
 
     constructor(props) {
 
@@ -61,4 +61,4 @@ class CuciSofa extends App {
     }
 }
 
-export default withRouter(CuciSofa);
+export default withRouter(_app);
