@@ -5,7 +5,7 @@ import { withRouter } from 'next/router';
 
 import grey from '@material-ui/core/colors/grey';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import 'react-calendar/dist/Calendar.css';
 import Loading from '../Component/Loading';
 
 class _app extends App {

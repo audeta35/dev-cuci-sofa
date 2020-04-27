@@ -64,23 +64,23 @@ class homepage extends Component {
                     </Row>
                     <Row className="bg-white py-3">
                         <Col xs={4} className="mt-2">
-                            <Services title="Sofa & Sofa Bed" pcs="item" price={50000} dicount={35000} image={sofa} />
+                            <Services sub="hot promo" title="Sofa & Sofa Bed" pcs="item" price={50000} dicount={35000} image={sofa} />
                         </Col>
                         <Col xs={4} className="mt-2">
-                            <Services title="Kasur" pcs="item" price={45000} dicount={30000} image={bed} />
+                            <Services sub="hot promo" title="Kasur" pcs="item" price={45000} dicount={30000} image={bed} />
                         </Col>
                         <Col xs={4} className="mt-2">
-                            <Services title="Karpet" pcs="meter" price={30000} dicount={25000} image={carpet} />
+                            <Services sub="hot promo" title="Karpet" pcs="meter" price={30000} dicount={25000} image={carpet} />
                         </Col>
                         <Col xs={4} className="mt-2">
-                            <Services title="Jok Mobil" pcs="item" price={60000} dicount={40000} image={seat} />
+                            <Services sub="hot promo" title="Jok Mobil" pcs="item" price={60000} dicount={40000} image={seat} />
                         </Col>
 
                         <Col xs={4} className="mt-2">
-                            <Services title="Bantal" pcs="item" price={20000} dicount={15000} image={pillow} />
+                            <Services sub="hot promo" title="Bantal" pcs="item" price={20000} dicount={15000} image={pillow} />
                         </Col>
                         <Col xs={4} className="mt-2">
-                            <Services title="Helm" pcs="item" price={10000} dicount={5000} image={helmet} />
+                            <Services sub="hot promo" title="Helm" pcs="item" price={10000} dicount={5000} image={helmet} />
                         </Col>
                     </Row>
 
