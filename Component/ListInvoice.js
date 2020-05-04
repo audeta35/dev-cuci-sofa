@@ -1,24 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Divider } from '@material-ui/core';
 import { EventTwoTone, MonetizationOnTwoTone, SupervisedUserCircleTwoTone } from '@material-ui/icons';
 import seat from '../assets/services/seat.jpg';
-import { Card, CardHeader, CardBody, CardFooter, Media, Row, Col } from 'reactstrap';
+import { Card, CardHeader, CardBody, CardFooter, Media, Row, Col, Button, Spinner } from 'reactstrap';
+import { useRouter } from 'next/router';
 
-const Invoice = () => {
+const ListInvoice = (props) => {
+
+    const router = useRouter();
+    const [isLoading, setIsLoading] = useState(false);
+
+    const pushLink = () => {
+
+        setIsLoading(true)
+        router.push({
+
+            pathname : "invoice",
+
+        })
+    }
 
     return (
 
         <Card className="my-4 shadow-sm">
             <CardHeader className="text-secondary bg-white">
-                <span className="badge badge-info">ID Invoice</span> /
-                <span className="badge badge-secondary">Tanggal Pesanan</span> /
+                <span className="badge badge-primary">ID Invoice</span> /
                 <span className="badge badge-success">Status Pemesanan</span>
             </CardHeader>
             <CardBody>
                 <Media>
-                    <Media left>
-                        <img src={seat} width={64} height={64} />
-                    </Media>
                     <Media body className="mx-2">
                         <small>Nama Produk / Service / Paket</small>
                         <Divider className="my-1" />
@@ -41,13 +51,19 @@ const Invoice = () => {
                 </Media>
             </CardBody>
             <CardFooter className="bg-white">
-                <small className="text-info">
-                    <SupervisedUserCircleTwoTone className="mr-1" />
-                    <i>Team Cleaner</i>
-                </small>
+            {
+                isLoading ? 
+                <Button className="stretched-link" color="primary" onClick={() => pushLink()} block disabled>
+                    <Spinner size="sm"/> struk pesanan
+                </Button>
+                :
+                <Button className="stretched-link" color="primary" onClick={() => pushLink()} block outline>
+                    struk pesanan
+                </Button>
+            }
             </CardFooter>
         </Card>
     )
 }
 
-export default Invoice;
+export default ListInvoice;
