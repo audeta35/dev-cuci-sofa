@@ -12,16 +12,17 @@ const Detail = (props) => {
 
         if(statement === "plus"){
 
-            setOrder(numOrder + 1);
-            props.addTotalPrice(props.price)
+            const itemOrder = numOrder + 1;
+            setOrder(itemOrder);
+            props.addTotalPrice(props.price, props.getDetailItem, itemOrder);
         }
 
         else if (statement == "minus") {
 
             if(numOrder > 0) {
-
-                setOrder(numOrder - 1)
-                props.clrTotalPrice(props.price)
+                const itemOrder = numOrder - 1;
+                setOrder(itemOrder)
+                props.clrTotalPrice(props.price, props.getDetailItem, itemOrder);
             }
         }
     }
@@ -29,12 +30,12 @@ const Detail = (props) => {
 	return (
 
         <ListItem className="shadow-sm rounded">
-            <ListItemText primary={props.item} secondary={`Rp ${props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} / ${props.pcs}`} />
-            <IndeterminateCheckBoxTwoTone onClick={() => setNumOrder("minus")} className="text-danger" />
-            <Badge className="mx-2" color="info">
+            <ListItemText primary={props.name} secondary={`Rp ${props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} / ${props.pcs}`} />
+            <IndeterminateCheckBoxTwoTone onClick={() => setNumOrder("minus")} className="text-primary" />
+            <Badge className="mx-2" color="primary">
                 {numOrder}
             </Badge>
-            <AddBoxTwoTone onClick={() => setNumOrder("plus")} className="text-success" />
+            <AddBoxTwoTone onClick={() => setNumOrder("plus")} className="text-primary" />
         </ListItem>
     )
 }
