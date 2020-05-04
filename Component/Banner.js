@@ -7,8 +7,12 @@ import {
     CarouselCaption
 } from 'reactstrap';
 
-import banner1 from '../assets/banner/123.jpg'
-import banner2 from '../assets/banner/1234.jpg'
+import banner1 from '../assets/banner/1.png'
+import banner2 from '../assets/banner/cuci-springbed-bekasi.jpg'
+import banner3 from '../assets/banner/proses-cuci-sofa.jpg'
+import banner4 from '../assets/banner/cucisofa1.jpg'
+import banner5 from '../assets/banner/cuci-sofa-springbed-solo.jpg'
+
 
 const items = [
     {
@@ -19,6 +23,22 @@ const items = [
 
     {
         src: banner2,
+        altText: 'Slide 2',
+        caption: 'Slide 2'
+    },
+    {
+        src: banner3,
+        altText: 'Slide 2',
+        caption: 'Slide 2'
+    },
+    {
+        src: banner4,
+        altText: 'Slide 2',
+        caption: 'Slide 2'
+    },
+
+    {
+        src: banner5,
         altText: 'Slide 2',
         caption: 'Slide 2'
     },
@@ -54,7 +74,7 @@ const Banner = (props) => {
                 onExited={() => setAnimating(false)}
                 key={item.src}
             >
-                <img src={item.src} className="w-100" height={170} alt={item.altText} />
+                <img src={item.src} className="w-100 rounded" height={210} alt={item.altText} />
             </CarouselItem>
         );
     });
@@ -65,7 +85,7 @@ const Banner = (props) => {
             activeIndex={activeIndex}
             next={next}
             previous={previous}
-            className="shadow rounded"
+            className="shadow"
         >
             <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
             {slides}
