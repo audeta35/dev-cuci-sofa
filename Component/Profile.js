@@ -42,7 +42,7 @@ const Profile = () => {
 
                 <Col xs={12} className="mt-3 mb-3">
                     <b className="text-muted">alamat</b>
-                    <Button className="float-right" color="info" size="sm" outline>
+                    <Button className="float-right" color="primary" size="sm" outline>
                         detail
                     </Button>
                 </Col>

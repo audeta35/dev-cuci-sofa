@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import { withRouter } from 'next/router';
 
 import grey from '@material-ui/core/colors/grey';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -39,7 +38,7 @@ class _app extends App {
             <Fragment>
                 <Head>
                     <title>Jasa Cuci Sofa</title>
-                    <meta name="theme-color" content="#2c8897" />
+                    <meta name="theme-color" content="#0068d7" />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
 
@@ -61,4 +60,4 @@ class _app extends App {
     }
 }
 
-export default withRouter(_app);
+export default _app;

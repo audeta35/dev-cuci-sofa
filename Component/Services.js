@@ -1,30 +1,39 @@
 import React, { Fragment } from 'react';
+
 import Link from 'next/link';
 import {
-    Card, CardText, CardBody,
+    Card,CardImg, CardImgOverlay, CardText, CardBody,
     CardTitle, CardSubtitle,
     Button, Badge,
 } from 'reactstrap';
+import { List, ListItem, ListItemText, ListItemAvatar } from '@material-ui/core';
+import { BusinessCenterTwoTone } from '@material-ui/icons';
 
-import Router from 'next/router';
+import {useRouter} from 'next/router';
+
+import seat from '../assets/services/seat.jpg';
 
 const Services = (props) => {
+
+    const router = useRouter();
+    const pushLink = () => {
+
+        router.push('/jasa');
+    }
 
     return (
 
         <Fragment>
-            <Link href="/jasa">
-                <Card color="light">
-
-                    <img className="card-img-top" width={100} height={90} src={props.image} alt={props.title} />
-                    <span className="badge badge-info" style={{ position: "absolute" }}>
-                        <i style={{ textDecoration: "line-through" }}> Rp {props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} </i>
-                    </span>
-
-                    <Button color="info" className="stretched-link" size="sm" outline>Rp {props.dicount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} </Button>
-
-                </Card>           
-            </Link>
+            <ListItem button className="shadow-sm bg-white rounded text-primary" onClick={() => pushLink()}>
+                <BusinessCenterTwoTone />
+                <ListItemText 
+                className="ml-3"
+                primary={props.title} 
+                secondary={
+                    <small> {props.subtitle} </small>
+                } 
+                />
+            </ListItem>  
         </Fragment>
     );
 };

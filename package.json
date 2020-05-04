@@ -20,6 +20,10 @@
     "react-calendar": "^3.0.1",
     "react-dom": "16.13.1",
     "reactstrap": "^8.4.1",
+    "sweetalert2": "^9.10.12",
     "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
   }
 }

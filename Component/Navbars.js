@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Router from 'next/router';
 import { Container, IconButton } from '@material-ui/core';
-import { ArrowBack, KingBedOutlined } from '@material-ui/icons';
+import { ArrowBack, WeekendTwoTone } from '@material-ui/icons';
 import {
     Navbar,
     NavbarBrand,
@@ -18,16 +18,16 @@ const Navbars = (props) => {
     return (
 
         <Fragment>
-            <Navbar className="sticky-top" color="info" dark expand="md">
+            <Navbar className="sticky-top" color="primary" dark expand="md">
                 <Container maxWidth="xs">
                     <Row>
                         <NavbarBrand className="text-white">
                             {
                                 props.stack ? 
-                                    <IconButton onClick={() => pushRouter()} className="bg-info" size="small">
+                                    <IconButton onClick={() => pushRouter()} className="bg-primary" size="small">
                                         <ArrowBack className="text-white" />
                                     </IconButton >
-                                : <KingBedOutlined className="mr-1" />
+                                : <WeekendTwoTone className="mr-1" />
                             }
 
                             <b> {props.navbrand} </b>

@@ -5,7 +5,7 @@ import { Container, Divider } from '@material-ui/core';
 import { EventTwoTone, MonetizationOnTwoTone, SupervisedUserCircleTwoTone } from '@material-ui/icons';
 import seat from '../assets/services/seat.jpg';
 import { Card, CardHeader, CardBody, CardFooter, Media, Row, Col } from 'reactstrap';
-import Invoice from '../Component/Invoice';
+import ListInvoice from '../Component/ListInvoice';
 import AppBars from '../Component/AppBars';
 
 class pesanan extends Component {
@@ -31,10 +31,10 @@ class pesanan extends Component {
             <Fragment>
                 <Navbars navbrand="Pesanan" />
                 <Container maxWidth="xs">
-                    <Invoice />
-                    <Invoice />
-                    <Invoice />
-                    <Invoice />
+                    <ListInvoice />
+                    <ListInvoice />
+                    <ListInvoice />
+                    <ListInvoice />
                 </Container>
                 <br />
                 <br />

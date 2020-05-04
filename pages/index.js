@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 import { Row, Col, DropdownItem, Button, Card, CardBody } from 'reactstrap';
 import { Container, Chip } from '@material-ui/core';
-import { RoomOutlined } from '@material-ui/icons';
+import { RoomTwoTone, WeekendTwoTone, KingBedTwoTone, AspectRatioTwoTone, EventSeatTwoTone } from '@material-ui/icons';
 
 import { withRouter } from 'next/router';
 
@@ -56,36 +56,36 @@ class homepage extends Component {
                     </Row>
 
                     <Row className="my-4">
-                        <Col className="bg-info text-center text-white" xs={6}>
+                        <Col className="bg-primary text-center text-white" xs={6}>
                             <h4 className="mt-1">
-                                <b>Hot Promo</b>
+                                <b>Jasa Kami</b>
                             </h4>
                         </Col>
                     </Row>
-                    <Row className="bg-white py-3">
-                        <Col xs={4} className="mt-2">
-                            <Services sub="hot promo" title="Sofa & Sofa Bed" pcs="item" price={50000} dicount={35000} image={sofa} />
+                    <Row className="">
+                        <Col xs={6} className="my-2">
+                            <Services sub="hot promo" title="Sofa" subtitle="Cuci Sofa" />
                         </Col>
-                        <Col xs={4} className="mt-2">
-                            <Services sub="hot promo" title="Kasur" pcs="item" price={45000} dicount={30000} image={bed} />
+                        <Col xs={6} className="my-2">
+                            <Services sub="hot promo" title="Kasur" subtitle="Cuci Kasur" />
                         </Col>
-                        <Col xs={4} className="mt-2">
-                            <Services sub="hot promo" title="Karpet" pcs="meter" price={30000} dicount={25000} image={carpet} />
+                        <Col xs={6} className="my-2">
+                            <Services sub="hot promo" title="Karpet" subtitle="Cuci Karpet" />
                         </Col>
-                        <Col xs={4} className="mt-2">
-                            <Services sub="hot promo" title="Jok Mobil" pcs="item" price={60000} dicount={40000} image={seat} />
+                        <Col xs={6} className="my-2">
+                            <Services sub="hot promo" title="Jok Mobil" subtitle="Cuci Jok Mobil" />
                         </Col>
 
-                        <Col xs={4} className="mt-2">
-                            <Services sub="hot promo" title="Bantal" pcs="item" price={20000} dicount={15000} image={pillow} />
+                        <Col xs={6} className="my-2">
+                            <Services sub="hot promo" title="Bantal" subtitle="Cuci Bantal" />
                         </Col>
-                        <Col xs={4} className="mt-2">
-                            <Services sub="hot promo" title="Helm" pcs="item" price={10000} dicount={5000} image={helmet} />
+                        <Col xs={6} className="my-2">
+                            <Services sub="hot promo" title="Springbed" subtitle="Cuci Springbed" />
                         </Col>
                     </Row>
 
                     <Row className="my-4">
-                        <Col className="bg-info text-center text-white" xs={6} >
+                        <Col className="bg-primary text-center text-white" xs={6} >
                             <h4 className="mt-1">
                                 <b>Paket Bundling</b>
                             </h4>
@@ -106,7 +106,7 @@ class homepage extends Component {
                     </Row>
 
                     <Row className="my-4">
-                        <Col className="bg-info text-center text-white" xs={6}>
+                        <Col className="bg-primary text-center text-white" xs={6}>
                             <h4 className="mt-1">
                                 <b>Cleaner Team</b>
                             </h4>
@@ -116,43 +116,43 @@ class homepage extends Component {
                         <Col md={3} xs={3} sm={4} className="text-center mt-3">
                             <img src={cleaner} className="img-thumbnail shadow rounded-circle" />
                             
-                            <h6 className="mt-3 text-info">
+                            <h6 className="mt-3 text-primary">
                                 <b>Audeta Sandy</b>
                             </h6>
 
-                            <i className="badge badge-info">Developer</i>
+                            <i className="badge badge-primary">Developer</i>
                         </Col>
 
                         <Col md={3} xs={3} sm={4} className="text-center mt-3">
                             <img src={cleaner} className="img-thumbnail shadow rounded-circle" />
-                            <h6 className="mt-3 text-info">
+                            <h6 className="mt-3 text-primary">
                                 <b>Audeta Sandy</b>
                             </h6>
 
-                            <i className="badge badge-info">Marketing</i>
+                            <i className="badge badge-primary">Marketing</i>
                         </Col>
 
                         <Col md={3} xs={3} sm={4} className="text-center mt-3">
                             <img src={cleaner} className="img-thumbnail shadow rounded-circle" />
-                            <h6 className="mt-3 text-info">
+                            <h6 className="mt-3 text-primary">
                                 <b>Audeta Sandy</b>
                             </h6>
 
-                            <i className="badge badge-info">Founder</i>
+                            <i className="badge badge-primary">Founder</i>
                         </Col>
 
                         <Col md={3} xs={3} sm={4} className="text-center mt-3">
                             <img src={cleaner} className="img-thumbnail shadow rounded-circle" />
-                            <h6 className="mt-3 text-info">
+                            <h6 className="mt-3 text-primary">
                                 <b>Audeta Sandy</b>
                             </h6>
 
-                            <i className="badge badge-info">Co Founder</i>
+                            <i className="badge badge-primary">Co Founder</i>
                         </Col>
                     </Row>
 
                     <Row className="my-4">
-                        <Col className="bg-info text-center text-white" xs={6}>
+                        <Col className="bg-primary text-center text-white" xs={6}>
                             <h4 className="mt-1">
                                 <b>Jangkauan</b>
                             </h4>
@@ -161,7 +161,7 @@ class homepage extends Component {
                     <Row className="mb-5 bg-white py-3 justify-content-center">
                         <Col className="mt-1 text-center">
                             <Chip
-                                icon={<RoomOutlined />}
+                                icon={<RoomTwoTone />}
                                 label="Jakarta"
                                 variant="outlined"
                             />
@@ -169,7 +169,7 @@ class homepage extends Component {
 
                         <Col className="mt-1 text-center">
                             <Chip
-                                icon={<RoomOutlined />}
+                                icon={<RoomTwoTone />}
                                 label="Bekasi"
                                 variant="outlined"
                             />
@@ -177,13 +177,13 @@ class homepage extends Component {
 
                         <Col className="mt-1 text-center">
                             <Chip
-                                icon={<RoomOutlined />}
+                                icon={<RoomTwoTone />}
                                 label="Bogor"
                                 variant="outlined"
                             />
                         </Col>
                     </Row>
-                    <DropdownItem className="bg-info border mb-4" divider />
+                    <DropdownItem className="bg-primary border mb-4" divider />
                 </Container>
                 <AppBars />
             </Fragment>
@@ -191,4 +191,4 @@ class homepage extends Component {
     }
 }
 
-export default homepage;
+export default withRouter(homepage);

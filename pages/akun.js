@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-
+import { withRouter } from 'next/router';
 import { Container } from '@material-ui/core';
 
 import Profile from '../Component/Profile';
@@ -29,4 +29,4 @@ class akun extends Component {
     }
 }
 
-export default akun;
+export default withRouter(akun);
