@@ -15,7 +15,7 @@ const AppBars = () => {
 
         if (router.pathname === path) {
 
-            return "text-info";
+            return "text-primary";
         }
 
         else {
