@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-
+import { withRouter } from 'next/router'
 import grey from '@material-ui/core/colors/grey';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-calendar/dist/Calendar.css';
@@ -60,4 +60,4 @@ class _app extends App {
     }
 }
 
-export default _app;
+export default withRouter(_app);
