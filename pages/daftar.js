@@ -5,6 +5,11 @@ import Navbars from '../Component/Navbars';
 
 class daftar extends Component {
 
+    componentDidMount() {
+
+        console.log('halaman daftar');
+    }
+
     render() {
 
         return (
