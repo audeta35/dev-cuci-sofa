@@ -6,6 +6,14 @@ import grey from '@material-ui/core/colors/grey';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-calendar/dist/Calendar.css';
 import Loading from '../Component/Loading';
+import { createMuiTheme } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/styles';
+
+const theme = createMuiTheme({
+    typography: {
+       
+    },
+});
 
 class _app extends App {
 
@@ -14,7 +22,7 @@ class _app extends App {
         super(props);
         this.state = {
 
-            isLoading : true,
+            isLoading: true,
         }
     }
 
@@ -30,32 +38,35 @@ class _app extends App {
     }
 
     render() {
-        
+
         const { Component, pageProps } = this.props;
-        
+
         return (
-            
-            <Fragment>
-                <Head>
-                    <title>Jasa Cuci Sofa</title>
-                    <meta name="theme-color" content="#0068d7" />
-                    <link rel="icon" href="/favicon.ico" />
-                </Head>
 
-                {
-                    this.state.isLoading 
-                    
-                    ? 
+            <ThemeProvider theme={theme}>
+                <Fragment>
+                    <Head>
+                        <title>Jasa Cuci Sofa</title>
+                        <meta name="theme-color" content="#0068d7" />
+                        <link rel="icon" href="/favicon.ico" />
+                    </Head>
 
-                    <Loading />
+                    {
+                        this.state.isLoading
 
-                    :
+                            ?
 
-                    <Fragment>
-                        <Component {...pageProps} />
-                    </Fragment>
-                }
-            </Fragment>
+                            <Loading />
+
+                            :
+
+                            <Fragment>
+                                <Component {...pageProps} />
+                            </Fragment>
+                    }
+                </Fragment>
+            </ThemeProvider>
+
         )
     }
 }

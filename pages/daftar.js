@@ -3,25 +3,17 @@ import React, { Component, Fragment } from 'react';
 import { Container } from '@material-ui/core';
 import Navbars from '../Component/Navbars';
 
-class daftar extends Component {
+const DaftarPage = () => {
 
-    componentDidMount() {
+    return (
 
-        console.log('halaman daftar');
-    }
+        <Fragment>
+            <Navbars navbrand="Daftar" stack={true} />
+            <Container maxWidth="xs">
 
-    render() {
-
-        return (
-
-            <Fragment>
-                <Navbars navbrand="Daftar" stack={true} />
-                <Container maxWidth="xs">
-                    
-                </Container>
-            </Fragment>
-        )
-    }
+            </Container>
+        </Fragment>
+    )
 }
 
-export default daftar;
+export default DaftarPage;

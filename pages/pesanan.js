@@ -8,41 +8,23 @@ import { Card, CardHeader, CardBody, CardFooter, Media, Row, Col } from 'reactst
 import ListInvoice from '../Component/ListInvoice';
 import AppBars from '../Component/AppBars';
 
-class pesanan extends Component {
-
-    constructor(props) {
-
-        super(props);
-        this.state = {
-
-            isLoading : true,
-        }
-    }
-
-    componentDidMount() {
-
-        this.setState({isLoading: false})
-    }
-
-    render() {
-
-        return (
-
-            <Fragment>
-                <Navbars navbrand="Pesanan" />
-                <Container maxWidth="xs">
-                    <ListInvoice />
-                    <ListInvoice />
-                    <ListInvoice />
-                    <ListInvoice />
-                </Container>
-                <br />
-                <br />
-                <br />
-                <AppBars />
-            </Fragment>
-        )
-    }
+const PesananPage = () => {
+    
+    return (
+        <Fragment>
+            <Navbars navbrand="Pesanan" />
+            <Container maxWidth="xs">
+                <ListInvoice />
+                <ListInvoice />
+                <ListInvoice />
+                <ListInvoice />
+            </Container>
+            <br />
+            <br />
+            <br />
+            <AppBars />
+        </Fragment>
+    )
 }
 
-export default pesanan;
+export default PesananPage;

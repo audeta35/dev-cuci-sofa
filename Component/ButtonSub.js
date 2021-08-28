@@ -13,16 +13,17 @@ const ButtonSub = (props) => {
     })
 
     const setInvoice = () => {
-        setIsLoading(true)
-        Router.replace({
-            pathname : '/invoice',
-            query : {
-                service_name: props.cart.serviceName,
-                time_order: props.cart.timeOrder,
-                date_order: props.cart.dateOrder,
-                total_price: props.cart.totalPrice,
-            },
-        });
+        console.log(props?.cart)
+        // setIsLoading(true)
+        // Router.replace({
+        //     pathname : '/invoice',
+        //     query : {
+        //         service_name: props.cart.serviceName,
+        //         time_order: props.cart.timeOrder,
+        //         date_order: props.cart.dateOrder,
+        //         total_price: props.cart.totalPrice,
+        //     },
+        // });
     }
 
 	return (

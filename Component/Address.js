@@ -5,8 +5,6 @@ import { HomeWork, Add } from '@material-ui/icons';
 
 const Address = (props) => {
 
-  const [alamat, setAlamat] = useState();
-  
   const listAlamat = {
 
     "alamat" : [{
@@ -55,7 +53,7 @@ const Address = (props) => {
       <List>
 
         {
-          listAlamat.alamat.map((data) => {
+          props?.alamatUser?.map((data) => {
 
             return(
 
